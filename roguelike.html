@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roguelike</title>
     <style>
         td {
@@ -12,25 +13,32 @@
             height: 30px;
             width: 30px;
         }
+
         td#Hero {
             color: lightblue;
         }
+
         td.Treasure {
             color: gold;
         }
+
         td.Orc {
             color: lightgreen;
         }
+
         td.Wall {
             font-size: 0px;
             background-color: gray;
         }
     </style>
 </head>
+
 <body>
     <section>
         <table>
-            <caption>MAPA</caption>
+            <caption>
+                MAPA
+            </caption>
             <tr>
                 <td class="Wall"></td>
                 <td class="Wall"></td>
@@ -56,7 +64,7 @@
             <tr>
                 <td class="Wall"></td>
                 <td></td>
-                <td id="Hero">@</td>
+                <td id="Hero" name="Heroi">@</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -473,5 +481,12 @@
             </tr>
         </table>
     </section>
+    <script>
+
+        const celulas = document.querySelectorAll("td")
+
+        celulas.forEach(element => element.classList.add("Wall"))
+    </script>
 </body>
+
 </html>
