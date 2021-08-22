@@ -484,6 +484,7 @@
     <script>
 
         const celulas = document.querySelectorAll("td")
+        document.get
 
         celulas.forEach(element => {
             if (element.classList.length == 0) {
@@ -501,10 +502,11 @@
                     element.innerHTML = "O"
                 }
                 else if (element.classList.contains("Orc")){
-                    element.innerText = ""
+                    element.innerText = "T"
                     element.classList.remove("Orc")
                     element.classList.add("Treasure")
                 } else if (element.classList.contains("Treasure")){
+                    element.innerText = ""
                     element.classList.remove("Treasure")
                     element.classList.add("Wall")
                 }
