@@ -489,7 +489,30 @@
             if (element.classList.length == 0) {
                 element.classList.add("Wall")
             }
+
+            
+            element.addEventListener("click", function () {
+                console.log("\nClasses antes: " + element.classList.toString())
+
+                if(element.classList.contains("Wall"))
+                    element.classList.remove("Wall")
+                else if (element.classList.length == 0){
+                    element.classList.add("Orc")
+                    element.innerHTML = "O"
+                }
+                else if (element.classList.contains("Orc")){
+                    element.innerText = ""
+                    element.classList.remove("Orc")
+                    element.classList.add("Treasure")
+                } else if (element.classList.contains("Treasure")){
+                    element.classList.remove("Treasure")
+                    element.classList.add("Wall")
+                }
+
+                console.log("Classes depois: " + element.classList.toString())
+            })
         })
+
     </script>
 </body>
 
