@@ -485,7 +485,11 @@
 
         const celulas = document.querySelectorAll("td")
 
-        celulas.forEach(element => element.classList.add("Wall"))
+        celulas.forEach(element => {
+            if (element.classList.length == 0) {
+                element.classList.add("Wall")
+            }
+        })
     </script>
 </body>
 
